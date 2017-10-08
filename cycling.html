@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <meta name="google-site-verification" content="ZG9GiflU2GV39evj886BqIq1JNcay3vDlsMHCwK1l3c" />
+
+  <title>UX Design · Photo · Travel · Trekking · Cycling</title>
+  <meta name="description" content="Design portfolio and travel catalogue">
+  <meta name="keywords" content="Andrew Day, user experience architecture, UX design, design direction, Chicago, Illinois, USA"  /> 
+  <meta name="author" content="Andrew Day">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+        <script src="http://cdn.kendostatic.com/2012.1.322/js/jquery.min.js" type="text/javascript"></script>
+        <script src="http://cdn.kendostatic.com/2012.1.322/js/kendo.web.min.js" type="text/javascript"></script>
+        <link href="http://cdn.kendostatic.com/2012.1.322/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://cdn.kendostatic.com/2012.1.322/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<link href="./strava_files/application-9d2f31c5f30c32ae59ea442357be7053.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./strava_files/strava-app-routes-69d8bea62aeae6c28d7440995abff23c.css" media="screen" rel="stylesheet" type="text/css">
+<!-- SVG Icons -->
+<link href="./strava_files/strava-app-icons-5ecd59321b6d7e0275bfa726dbf4d06d.css" media="screen" rel="stylesheet" type="text/css">
+<!--[if lte IE 9]>
+<link href="https://d3nn82uaxijpm6.cloudfront.net/assets/application-ie-04a301a01e9ad971f44f439c583c6221.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<meta content="authenticity_token" name="csrf-param">
+<meta content="zkhBSPzGzMLiFe9OpMTM6fRN2LYyOiiCuK6hlNLWeJc=" name="csrf-token">
+
+<title>Cycling</title>
+<link href="./strava_files/strava-mapbox-2e548638b5b8e1794d49cc09c8b47b97.css" media="screen" rel="stylesheet" type="text/css">
+
+
+
+
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/modernizr-1.6.min.js"></script>
+  
+  <script src="//use.typekit.net/kjy5jrw.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+
+
+
+
+
+<style type="text/css">
+  .spinner, .spinner .status {
+    position: relative; }
+  
+  .spinner {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+    .spinner .status {
+      top: 2px;
+      margin-left: 0.5em; }
+    .spinner.lg .graphic {
+      border-width: 3px;
+      height: 32px;
+      width: 32px; }
+    .spinner.tiny {
+      height: 10px;
+      width: 10px; }
+    .spinner.centered, .spinner.vcentered {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%; }
+    .spinner.vcentered {
+      left: 0;
+      margin-top: -12px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50%; }
+  
+  .spinner .graphic, .ajax-loading-image {
+    animation: spin 1.2s infinite linear;
+    -webkit-animation: spin 1.2s infinite linear;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-color: #eee;
+    border-radius: 50%;
+    border-style: solid;
+    border-top-color: #666;
+    border-top-style: solid;
+    border-width: 2px;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    vertical-align: middle;
+    width: 20px; }
+  
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(359deg); } }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(359deg); } }
+
+#container { width: 95%; margin 0 auto !important; }
+  h1 {margin: 53px 0 15px 0 !important; }
+  h2, h3, h3 a {text-shadow:none !important; }
+  div.metadata h3, div.metadata h3 a {font-size: 23px !important; color:#fff!important; height:75px!important; margin:0 !important; width:auto !important; }
+div.metadata {background-color:#000}
+.inline-stats strong, .inline-stats b { font-size:2.0rem; color:#aaa; }
+
+ul.inline-stats li {margin-right: 11%}
+
+ul.inline-stats li div.label { font-size:0.7rem; color:#444; text-transform:uppercase; letter-spacing:0.03em;}
+
+ul { margin:0; }
+
+
+</style>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88343733-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+    </head>
+    
+    
+
+    <body>
+    
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P26KTV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P26KTV');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+<div id="container">
+  
+<header>
+
+<nav>
+<ul>
+<li class="first"><a href="index.html">Viewfinder</a></li>
+<li><a href="chronology.html">Itineraries</a></li>
+<li><a href="map.html">Atlas</a></li>
+<li><a href="scrapbook.html">S-crap-book</a></li>
+<li class="selected">Handlebars</li>
+<li class="last"><a href="http://design.andrewday.com/">Design & UX →</a></li>
+</ul>
+</nav>
+
+
+
+<h1>pedal power</span></h1>
+
+
+</header>
+
+
+
+<div class="container">
+
+
+<ul class="routes-list">
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156498">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156498" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1786.png" style="height: 256px; width: 256px; left: -186px; top: -48px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1786(1).png" style="height: 256px; width: 256px; left: 70px; top: -48px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -525 1911 1225" style="transform: translate3d(-820px, -525px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M94 138L97 140L109 131L120 131L125 128L146 104L146 106L155 96L150 101L152 100L147 104L158 92L154 88L148 77L150 75L151 68L166 40L172 40L174 35L179 34L179 39L169 47L174 40L174 35L172 40L166 40L149 76L152 85L158 91L153 88L136 108L131 103L140 111L139 112L140 111L147 117L145 121L140 125L142 125L146 121L132 129L128 126L119 132L109 132L96 142L93 136L94 138"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(94px, 138px, 0px); z-index: 138;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(94px, 138px, 0px); z-index: 138;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/114.192/22.388/12" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156498" title="Tai Wai → Sha Tin, HK">1998<br>Tai Wai → Sha Tin, HK</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            10.0<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            1,064<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156495">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156495" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3849.png" style="height: 256px; width: 256px; left: -45px; top: -45px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3849(1).png" style="height: 256px; width: 256px; left: 211px; top: -45px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -526 1911 1225" style="transform: translate3d(-820px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M93 137L85 140L82 130L110 100L131 87L147 94L150 87L189 58L167 39L186 18L210 40L222 27L234 39L240 30L251 41L251 45L254 47L253 70L252 66L250 75L229 85L216 101L195 79L209 64L206 63L196 68L189 58L155 28L91 96L67 87L29 85L24 88L37 148L19 157L65 149L93 137"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(93px, 137px, 0px); z-index: 137;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(93px, 137px, 0px); z-index: 137;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/106.686/10.768/13" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156495" title="Ho Chi Minh City, VN">1998<br>Ho Chi Minh City, VN</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            9.9<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            770<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156475">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156475" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/368.png" style="height: 256px; width: 256px; left: -38px; top: -203px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/368(1).png" style="height: 256px; width: 256px; left: 218px; top: -203px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/369.png" style="height: 256px; width: 256px; left: -38px; top: 53px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/369(1).png" style="height: 256px; width: 256px; left: 218px; top: 53px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -526 1911 1225" style="transform: translate3d(-820px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M51 53L51 59L61 58L66 53L82 66L97 96L101 96L103 94L108 93L107 90L116 86L131 86L141 94L153 89L163 97L180 96L191 98L198 104L202 110L218 118L220 121L222 119L210 118L200 122L192 122L185 120L176 110L166 103L162 97L158 96L154 92L147 92L143 95L138 96L121 109L113 110L111 108L106 110L107 111L99 111L97 95L84 69L66 53L56 59L54 55L51 55L51 53"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(51px, 53px, 0px); z-index: 53;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(51px, 53px, 0px); z-index: 53;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/-0.465/44.808/10" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156475" title="Bordeaux → Creon, FR">1999<br>Bordeaux → Creon</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            31.6<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            1,317<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156520">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156520" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/4633.png" style="height: 256px; width: 256px; left: -50px; top: -22px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/4633(1).png" style="height: 256px; width: 256px; left: 206px; top: -22px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-819 -526 1911 1225" style="transform: translate3d(-819px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M240 169L208 158L117 153L55 161L33 169L47 163L65 160L61 142L71 140L68 128L91 125L89 109L92 107L85 94L93 67L94 37L103 21L112 15L131 6L143 8L155 6L151 7L169 7L174 15L175 33L147 67L153 81L169 76L180 77L193 90L195 97L189 107L156 117L123 117L156 119L156 124L180 125L180 122L193 123L191 157L208 158L240 169"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(240px, 169px, 0px); z-index: 169;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(240px, 169px, 0px); z-index: 169;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/-43.210/-22.976/13" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156520" title="Rio de Janeiro, BR">2001<br>Rio de Janeiro, BR</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            9.7<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            734<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156529">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156529" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3566.png" style="height: 256px; width: 256px; left: -60px; top: -254px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3566(1).png" style="height: 256px; width: 256px; left: 196px; top: -254px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3567.png" style="height: 256px; width: 256px; left: -60px; top: 2px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/3567(1).png" style="height: 256px; width: 256px; left: 196px; top: 2px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -525 1911 1225" style="transform: translate3d(-820px, -525px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M217 130L206 136L193 137L98 157L96 150L88 144L88 128L84 119L68 96L58 101L52 101L58 101L68 96L84 119L88 131L83 160L68 162L16 159L75 162L193 137L206 136L213 133L256 99L249 52L254 26L250 13L254 26L249 52L256 99L229 120L238 132L229 120L217 130"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(217px, 130px, 0px); z-index: 130;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(217px, 130px, 0px); z-index: 130;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/-83.726/22.621/13" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156529" title="Viñales, CU">2009<br>Viñales, CU</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            9.6<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            508<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156485">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156485" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/592.png" style="height: 256px; width: 256px; left: -86px; top: -112px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/592(1).png" style="height: 256px; width: 256px; left: 170px; top: -112px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/593.png" style="height: 256px; width: 256px; left: -86px; top: 144px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/593(1).png" style="height: 256px; width: 256px; left: 170px; top: 144px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-819 -526 1911 1225" style="transform: translate3d(-819px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M136 98L141 98L145 102L165 98L180 109L188 107L184 98L173 95L156 95L155 93L147 93L146 91L139 92L139 90L136 90L134 88L125 71L120 51L118 49L119 51L128 51L131 49L131 45L134 40L133 39L136 50L140 55L139 63L144 84L146 84L146 87L147 86L146 87L148 101L158 100L158 109L164 119L156 133L154 133L155 135L154 133L156 133L164 119L158 109L158 100L147 101L125 117L120 119L117 119L112 112L108 111L92 113L93 115L91 115L90 117L86 117L92 116L93 113L113 112L116 98L121 94L116 87L115 83L116 87L126 100L132 98L134 100L136 98"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(136px, 98px, 0px); z-index: 98;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(136px, 98px, 0px); z-index: 98;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/24.938/60.172/11" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156485" title="Helsinki, FI">2010<br>Helsinki, FI</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            13.3<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            2,122<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/154566">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-154566" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/640.png" style="height: 256px; width: 256px; left: -32px; top: -27px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/640(1).png" style="height: 256px; width: 256px; left: 224px; top: -27px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-819 -526 1911 1225" style="transform: translate3d(-819px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M235 48L232 110L223 111L220 100L216 100L216 104L216 100L210 109L207 106L173 149L134 155L114 148L106 156L92 141L73 155L39 89L60 86L128 52L159 54L174 48L177 19L214 36L213 44L218 51L234 46L235 48"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(235px, 48px, 0px); z-index: 48;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(235px, 48px, 0px); z-index: 48;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/37.557/55.733/11" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/154566" title="Moscow, RU">2010<br>Moscow, RU</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            16.2<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            1,120<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156488">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156488" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1316.png" style="height: 256px; width: 256px; left: 3px; top: -163px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1317.png" style="height: 256px; width: 256px; left: 3px; top: 93px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1316(1).png" style="height: 256px; width: 256px; left: -253px; top: -163px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1316(2).png" style="height: 256px; width: 256px; left: 259px; top: -163px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1317(1).png" style="height: 256px; width: 256px; left: -253px; top: 93px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1317(2).png" style="height: 256px; width: 256px; left: 259px; top: 93px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-819 -526 1911 1225" style="transform: translate3d(-819px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M177 79L176 80L169 76L164 79L161 85L153 75L141 67L138 58L130 44L115 42L130 44L129 26L107 29L89 43L77 33L62 14L81 37L113 57L131 88L110 114L106 116L97 133L95 148L132 160L132 158L155 144L178 126L192 136L211 157L192 136L177 125L185 118L168 94L190 75L195 74L199 78L195 74L190 75L168 93L161 85L164 79L169 76L176 80L177 79"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(177px, 79px, 0px); z-index: 79;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(177px, 79px, 0px); z-index: 79;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/27.556/53.906/12" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156488" title="Minsk, BY">2010<br>Minsk, BY</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            10.2<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            674<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/161360">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-161360" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1345.png" style="height: 256px; width: 256px; left: 5px; top: -231px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1346.png" style="height: 256px; width: 256px; left: 5px; top: 25px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1345(1).png" style="height: 256px; width: 256px; left: -251px; top: -231px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1345(2).png" style="height: 256px; width: 256px; left: 261px; top: -231px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1346(1).png" style="height: 256px; width: 256px; left: -251px; top: 25px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1346(2).png" style="height: 256px; width: 256px; left: 261px; top: 25px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -526 1911 1225" style="transform: translate3d(-820px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M149 86L148 89L136 96L127 98L124 96L120 96L117 100L107 105L104 109L96 105L84 110L83 112L88 111L83 112L84 110L68 117L70 121L68 124L72 147L86 156L91 150L95 149L97 145L94 139L110 132L103 119L115 113L115 109L132 102L139 118L138 115L146 107L145 104L150 102L158 105L159 99L157 96L169 74L176 75L178 66L185 66L194 47L198 41L199 42L205 22L203 18L195 20L192 18L177 36L175 35L178 32L175 35L170 34L170 37L164 36L163 41L152 40L152 67L139 74L145 82L147 81L149 86"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(149px, 86px, 0px); z-index: 86;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(149px, 86px, 0px); z-index: 86;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/4.879/52.363/12" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/161360" title="Amsterdam, NL">2011<br>Amsterdam, NL</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            8.1<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            367<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156516">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156516" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1408.png" style="height: 256px; width: 256px; left: -29px; top: -193px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1408(1).png" style="height: 256px; width: 256px; left: 227px; top: -193px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1409.png" style="height: 256px; width: 256px; left: -29px; top: 63px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1409(1).png" style="height: 256px; width: 256px; left: 227px; top: 63px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-819 -525 1911 1225" style="transform: translate3d(-819px, -525px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M219 80L218 78L210 81L212 95L200 91L191 84L184 91L173 84L174 82L170 80L164 95L158 96L147 124L157 129L154 142L152 143L141 140L141 142L133 140L132 142L127 142L132 142L143 111L140 114L140 118L137 121L140 122L143 111L155 91L117 72L112 77L114 79L112 79L112 76L91 67L94 60L85 56L75 54L72 58L62 53L60 56L61 53L55 50L53 74L55 49L57 44L49 40L53 37L56 32L61 34L71 42L82 47L84 43L109 37L108 39L135 46L188 63L204 76L218 67L223 71L224 75L218 78L219 80"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(219px, 80px, 0px); z-index: 80;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(219px, 80px, 0px); z-index: 80;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/2.342/48.859/12" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156516" title="Paris, FR">2011<br>Paris, FR</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            11.0<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            984<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156541">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156541" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 1px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1807.png" style="height: 256px; width: 256px; left: -176px; top: -92px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1807(1).png" style="height: 256px; width: 256px; left: 80px; top: -92px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1808.png" style="height: 256px; width: 256px; left: -176px; top: 164px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/1808(1).png" style="height: 256px; width: 256px; left: 80px; top: 164px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -526 1911 1225" style="transform: translate3d(-820px, -526px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M49 49L53 49L53 57L55 58L80 58L112 68L111 72L116 78L111 72L124 46L150 57L157 63L155 68L206 141L216 141L216 146L222 147L223 124L185 109L185 111L172 119L171 118L172 119L185 111L155 68L153 69L119 57L124 46L118 43L117 28L120 28L120 32L53 34L53 49L49 49"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(49px, 49px, 0px); z-index: 49;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(49px, 49px, 0px); z-index: 49;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/-103.340/20.658/12" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156541" title="Guadalajara, MX">2011<br>Guadalajara, MX</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            13.2<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            352<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+  <li class="route-card">
+    <a href="https://www.strava.com/routes/156503">
+      <div class="map leaflet-container leaflet-fade-anim" id="map-canvas-route-156503" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(1px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container"></div></div><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/771.png" style="height: 256px; width: 256px; left: -118px; top: -181px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/771(1).png" style="height: 256px; width: 256px; left: 138px; top: -181px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/772.png" style="height: 256px; width: 256px; left: -118px; top: 75px;"><img class="leaflet-tile leaflet-tile-loaded" src="./strava_files/772(1).png" style="height: 256px; width: 256px; left: 138px; top: 75px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="1911" height="1225" viewBox="-820 -525 1911 1225" style="transform: translate3d(-820px, -525px, 0px);"><g><path stroke-linejoin="round" stroke-linecap="round" stroke="#FF0000" stroke-opacity="1" stroke-width="3" fill="none" class="leaflet-clickable" d="M140 149L137 147L142 147L151 144L149 138L151 139L149 136L155 134L152 124L155 123L151 124L155 123L154 117L149 117L149 107L142 106L143 97L138 87L140 61L144 61L140 61L141 39L145 23L149 24L149 27L151 27L149 27L145 33L146 37L131 42L122 57L119 75L119 101L124 117L122 118L118 126L131 129L135 128L133 135L136 146L132 144L131 146L133 148L131 151L135 151L137 149L142 152L140 149"></path></g></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon map-marker-sprite start-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(140px, 149px, 0px); z-index: 149;"><div class="blip"></div></div><div class="leaflet-marker-icon map-marker-sprite end-icon leaflet-zoom-animated leaflet-clickable shown" style="margin-left: -12px; margin-top: -12px; width: 24px; height: 24px; transform: translate3d(140px, 149px, 0px); z-index: 149;"><div class="blip"></div></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-grid map-tooltip leaflet-control" style="display: none;"><a class="close" href="https://www.strava.com/athlete/routes#" title="close">close</a><div class="map-tooltip-content"></div></div></div><div class="leaflet-bottom leaflet-left"><div class="mapbox-logo leaflet-control"></div></div><div class="leaflet-bottom leaflet-right"><div class="map-legends wax-legends leaflet-control" style="display: none;"></div><div class="leaflet-control-attribution leaflet-control leaflet-compact-attribution"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a> <a class="mapbox-improve-map" href="https://www.mapbox.com/map-feedback/#strava.blprdx6r/-3.693/40.440/11" target="_blank">Improve this map</a></div></div></div></div>
+    </a>
+    <div class="metadata">
+      <h3>
+        <a href="https://www.strava.com/routes/156503" title="Madrid, ES">2012<br>Madrid, ES</a>
+      </h3>
+      <ul class="inline-stats">
+        <li>
+          <strong>
+            13.8<abbr class="unit" title="miles">mi</abbr></strong>
+          <div class="label">Distance</div>
+        </li>
+        <li>
+          <strong>
+            1,666<abbr class="unit" title="feet">ft</abbr></strong>
+          <div class="label">Elevation Gain</div>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+
+
+
+
+
+
+
+
+
+
+</ul></section></div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+    
+
+</div>
+
+
+
+</body>
+
+</html>

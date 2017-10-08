@@ -1,0 +1,9 @@
+body, #container, #pane1, #pane2, #pane3, header, img { margin:0; padding:0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial; }
+#container { width:1920px; height:100% }
+#pane1, #pane2, #pane3 { width:640px; min-height:960px; overflow:hidden; float:left; }
+#pane1 { background:url(../design_test/images_640/home_bg_1.jpg) top center no-repeat; background-attachment:fixed; }
+#pane3 { background:url(../design_test/images_640/proj_now_bg.jpg) top center no-repeat; background-attachment:fixed; }
+#pane1 img { margin-top:480px; }
+#pane3 img { margin-top:300px; } 
+header { position:fixed; right:0px; top:0px; width:551px; height:152px; z-index:10; }

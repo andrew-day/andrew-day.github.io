@@ -1,0 +1,59 @@
+body, #container, #pane1, #pane2, #pane3, header, img { margin:0; padding:0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial; }
+#container { width:3840px; height:100% }
+#pane1, #pane2, #pane3 { width:1280px; height:100%; overflow:hidden; float:left; }
+#pane3 { background:url(../design_test/images/proj_now_bg.jpg) top center no-repeat; background-attachment:fixed; }
+#pane3 img { margin-top:400px; }
+header { position:fixed; right:40px; top:0px; width:592px;  height:75px; z-index:10; }
+#home_panel { position:absolute; width:1100px; height:700px; top:240px; left: 380px; background:url(images/home_panel_1.png) no-repeat top left; z-index:9; }
+
+
+
+#carousel_inner {
+float:left; /* important for inline positioning */
+width:900px; /* important (this width = width of list item(including margin) * items shown */ 
+overflow: hidden;  /* important (hide the items outside the div) */
+/* non-important styling bellow */
+}
+
+#carousel_ul {
+position:relative;
+left:-900px; /* important (this should be negative number of list items width(including margin) */
+list-style-type: none; /* removing the default styling for unordered list items */
+margin: 0px;
+padding: 0px;
+width:9999px; /* important */
+/* non-important styling bellow */
+padding-bottom:10px;
+}
+
+#carousel_ul li{
+float: left; /* important for inline positioning of the list items */                                    
+width:900px;  /* fixed width, important */
+height:700px;
+/* just styling bellow*/
+padding:0px;
+margin:0; 
+}
+
+#carousel_ul li img {
+/* .margin-bottom:-4px; */
+ /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
+/* styling */
+cursor:pointer;
+cursor: hand; 
+border:none; 
+/*box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);*/
+}
+
+#left_scroll, #right_scroll{
+float:left; 
+height:20px;
+width:15px; 
+}
+
+#left_scroll img, #right_scroll img{
+border:0; /* remove the default border of linked image */
+/*styling*/
+cursor: pointer;
+cursor: hand;
