@@ -1,38 +1,49 @@
 
 <!DOCTYPE html>
-	
-<head>
-	
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TQBF9JG');</script>
-<!-- End Google Tag Manager -->
-	
-<!-- Typekit -->
-<script>
-  (function(d) {
-    var config = {
-      kitId: 'kjy5jrw',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
 
-	
+<head>
+
+	<!-- GA and Optimize code, 2018-05-17 -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-88343733-1', 'auto');
+	  ga('require', 'GTM-T8FGVH9');
+	  ga('send', 'pageview');
+	</script>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88343733-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-88343733-1');
+	</script>
+
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TQBF9JG');</script>
+
+
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:300,400,400i,700&display=swap" rel="stylesheet">
+
+
   <meta charset="utf-8">
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Virtual hoarding</title>
   <meta name="description" content="Design portfolio and travel catalogue">
-  <meta name="keywords" content="Andrew Day, design, interactive design, integrated marketing, identity, and advertising, Chicago, Illinois, USA"  /> 
+  <meta name="keywords" content="Andrew Day, design, interactive design, integrated marketing, identity, and advertising, Chicago, Illinois, USA"  />
   <meta name="author" content="Andrew Day">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
@@ -53,39 +64,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="css/main.css">
 
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88343733-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-88343733-1');
-</script>
-
-
-
-        <style>
-        
-#container { padding-bottom:0 !important }
-
-        </style>
-                
-                
     </head>
-    
-    
+
+
     <body>
-    
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQBF9JG"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-	    
-    
+
+
 <div id="container">
-  
+
 <header>
 
 <nav>
@@ -169,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </optgroup>
 
 </select>
-        
+
         <button class="k-button" id="update">yep</button>
 
 </div><!-- end menu -->
@@ -179,36 +170,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <div id="picstest"></div>
-        
+
         <div id="pics"></div>
         <div id="loading">Loading...</div>
-      
-      
+
+
       	<div id="credit">Justified image layout by <a href="http://www.wackylabs.net">Sam Judson</a></div>
-        
-      
+
+
         <script type="text/javascript">
-		
+
 // Developed by Sam Judson, sam@wackylabs.net
 // http://www.wackylabs.net
 //
 // This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
 // http://creativecommons.org/licenses/by-nc-sa/3.0/
-  
+
 
 $(document).ready(function() {
 
     // perform initial loading
     justifiedLayout.loadData();
-    
+
     $("#update").click(justifiedLayout.loadData);
-    
+
     $("#tags").keyup(function(event){
         if(event.keyCode == 13){
             $("#update").click();
         }
     });
-    
+
     $("#sort").kendoDropDownList({
         change: justifiedLayout.loadData
     });
@@ -221,7 +212,7 @@ var justifiedLayout = {};
 
     var minWidth = 800;
     var minHeight = 350;
-  
+
     var lastWidth = 0;
     var photoArray = null;
     var maxPhotos = 30;
@@ -232,7 +223,7 @@ var justifiedLayout = {};
 
         var nowWidth = $("div#picstest").innerWidth();
         if( nowWidth < minWidth ) return;
-        
+
         // test to see if the window resize is big enough to deserve a reprocess
         if( nowWidth * 1.1 < lastWidth || nowWidth * 0.9 > lastWidth )
         {
@@ -247,7 +238,7 @@ var justifiedLayout = {};
         maxPhotos = 30;
         $("div#pics").empty();
         $("#loading").show();
-        
+
         var tags = $("#tags").val();
         var sort = $("#sort").val();
         $.getJSON("https://api.flickr.com/services/rest/",
@@ -262,7 +253,7 @@ var justifiedLayout = {};
                 format: "json",
                 per_page: 500,
                 nojsoncallback: 1
-            }, 
+            },
             function(data, status) {
                 photoArray = data.photos.photo;
                 updateRows();
@@ -270,7 +261,7 @@ var justifiedLayout = {};
             }
         );
     };
-  
+
     var clickHandler = function(photo)
         {
           return function() {
@@ -287,24 +278,24 @@ var justifiedLayout = {};
         processPhotos(photoArray);
         $("div.picrow").width(lastWidth);
     };
-    
+
     var processPhotos = function(photos) {
         if (!photos) return;
-      
+
         // divs to contain the images
         var d = $("div#pics");
         if( baseLine === 0 ) {
             d.empty();
         }
-        
+
         // get row width - this is fixed.
         var w = lastWidth;
-        
+
         // initial height - effectively the maximum height +/- 10%;
         var h = Math.max(minHeight,Math.floor(w / 5));
         // margin width
         var border = 5;
-        
+
         // store relative widths of all images (scaled to match estimate height above)
         var ws = [];
         $.each(photos, function(key, val) {
@@ -313,18 +304,18 @@ var justifiedLayout = {};
             if( ht != h ) { wt = Math.floor(wt * (h / ht)); }
             ws.push(wt);
         });
-    
+
         var rowNum = 0;
         var limit = Math.min(maxPhotos, photos.length);
-        
+
         while(baseLine < limit)
         {
             rowNum++;
             // number of images appearing in this row
-            var c = 0; 
+            var c = 0;
             // total width of images in this row - including margins
             var tw = 0;
-            
+
             // calculate width of images and number of images to view in this row.
             while( (tw * 1.1 < w) && (baseLine + c < limit))
             {
@@ -333,14 +324,14 @@ var justifiedLayout = {};
 
             // skip the last row
             if( baseLine + c >= limit ) return;
-            
+
             var d_row = $("<div/>", {"class" : "picrow"});
             d.append(d_row);
-            
+
 
             // Ratio of actual width of row to total width of images to be used.
-            var r = w / tw; 
-            
+            var r = w / tw;
+
             // image number being processed
             var i = 0;
             // reset total width to be total width of processed images
@@ -356,33 +347,33 @@ var justifiedLayout = {};
                 var wt = Math.floor(ws[baseLine + i] * r);
                 // add to total width with margins
                 tw += wt + border * 2;
-              
+
                 // Create image, set src, width, height and margin
                 var purl = photo.url_n;
                 if( wt > photo.width_n * 1.2 || ht > photo.height_n * 1.2 ) purl = photo.url_m;
                 if( wt > photo.width_m * 1.2 || ht > photo.height_m * 1.2 ) purl = photo.url_z;
                 if( wt > photo.width_z * 1.2 || ht > photo.height_z * 1.2 ) purl = photo.url_l;
-              
+
                 var img = $(
-                  '<img/>', 
+                  '<img/>',
                   {
-                      "class": "photo", 
-                      src: purl, 
-                      width: wt, 
+                      "class": "photo",
+                      src: purl,
+                      width: wt,
                       height: ht
                   }).css("margin", border + "px");
-              
+
                 img.click(clickHandler(photo));
                 d_row.append(img);
 
                 i++;
             }
-            
+
             // set row height to actual height + margins
             baseLine += c;
 
-            // if total width is slightly smaller than 
-            // actual div width then add 1 to each 
+            // if total width is slightly smaller than
+            // actual div width then add 1 to each
             // photo width till they match
             i = 0;
             while( tw < w )
@@ -392,8 +383,8 @@ var justifiedLayout = {};
                 i = (i + 1) % c;
                 tw++;
             }
-            // if total width is slightly bigger than 
-            // actual div width then subtract 1 from each 
+            // if total width is slightly bigger than
+            // actual div width then subtract 1 from each
             // photo width till they match
             i = 0;
             while( tw > w )
@@ -403,7 +394,7 @@ var justifiedLayout = {};
                 i = (i + 1) % c;
                 tw--;
             }
-            
+
         }
     };
 
@@ -432,7 +423,7 @@ var justifiedLayout = {};
         }
         setTimeout(pollLevel, 100);
     };
-    
+
     pollLevel();
 
 })(justifiedLayout);
@@ -444,37 +435,3 @@ var justifiedLayout = {};
 </body>
 
 </html>
-
-
-<!--
-        <optgroup label="Places">
-            <option value="ad-scrapbook,africa">Africa</option>
-            <option value="ad-scrapbook,Morocco">- Morocco</option>
-
-            <option value="ad-scrapbook,asia">Asia</option>
-            <option value="ad-scrapbook,hong kong">- Hong Kong</option>
-            <option value="ad-scrapbook,india">- India</option>
-            <option value="ad-scrapbook,japan">- Japan</option>
-
-            <option value="ad-scrapbook,europe">Europe</option>
-            <option value="ad-scrapbook,bulgaria">- Bulgaria</option>
-            <option value="ad-scrapbook,france">- France</option>
-            <option value="ad-scrapbook,germany">- Germany</option>
-            <option value="ad-scrapbook,italy">- Italy</option>
-            <option value="ad-scrapbook,russia">- Russia</option>
-            <option value="ad-scrapbook,spain">- Spain</option>
-            <option value="ad-scrapbook,turkey">- Turkey</option>
-            <option value="ad-scrapbook,united kingdom">- United Kingdom</option>
-            
-            <option value="ad-scrapbook,south america">South America</option>
-            <option value="ad-scrapbook,brazil">- Brazil</option>
-            <option value="ad-scrapbook,argentina">- Argentina</option>
-                       
-            <option value="">Northy America</option>
-            <option value="ad-scrapbook,united states">- USA</option>
-            <option value="ad-scrapbook,mexico">- Mexico</option>
-            <option value="ad-scrapbook,cuba">- Cuba</option>
-        </optgroup>
-            <option></option>
-
--->
