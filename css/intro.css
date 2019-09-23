@@ -21,8 +21,8 @@ header { display:block; background-image:url(../images/icons.png); background-re
 a, nav ul li a { color:#a98 !important; text-decoration:none; }
 a:hover, nav ul li a:hover { color:#dcb !important; }
 
-nav { width:90%; height:30px; margin:-17px 0px 20px 0px; }
-nav ul li { display:inline; float:left; color:#876; font-size:1em; font-weight:500; letter-spacing:4px; text-transform:uppercase; margin:34px 0 15px 0; padding:0 13px 0 15px; border-right:1px dotted #543; }
+nav { width:100%; height:30px; margin:0 0px; }
+nav ul li { display:inline; float:left; color:#876; font-size:1rem; font-weight:500; letter-spacing:4px; text-transform:uppercase; margin:34px 0 15px 0; padding:0 13px 0 13px; border-right:1px dotted #543; }
 li.selected { color:#fff; }
 li.first { padding-left:0; }
 li.last { border-right:none; color:#C30 !important; }
@@ -42,7 +42,7 @@ section#main div img { height:174px; width:auto; margin: 0 6px 6px 0; border:non
 h1 { font-family: 'Lato', serif; float:none; color:#765; font-size:4.5em; font-weight:100; font-style:normal; margin:53px 0 15px 0; text-shadow: 0px 1px 2px rgba(0,0,0,0.5);}
 h1.intro { font-family: 'Lato', sans-serif; font-size:28px; margin:12px 65px 25px 0; font-style:italic; float:left; line-height:130%; }
 .andrew { color:#876; font-weight:300; margin-right:25px; }
-.aboutme { font-family: 'Alegreya', serif; font-size:20px; text-transform:uppercase; font-style:italic; letter-spacing:0.15em; }
+.aboutme { font-family: 'Alegreya', serif; font-size:1.5rempx; text-transform:none; font-style:italic; letter-spacing:0em; }
 
 h2 { display:inline; width:100px; float:left; text-align:right; color:rgba(150,140,130,0.6); font-size:1.6em; font-weight:100; margin:55px 15px 0 0; padding:0 15px 0 0; background:url('../intro/images/caret.png') 100% 50% no-repeat; letter-spacing:0.15em; }
 h3 { width:200px; display:block; float:none; color:#FFE; font-size:21px; font-weight:600; font-style:italic; margin:18px 15px 0 15px; text-shadow: 2px 2px 3px rgba(0,0,0,1); -webkit-font-smoothing:antialiased; }
@@ -64,11 +64,9 @@ h6 { width:10%; height:60px; display:inline; float:left; color:#987; font-size:1
 
 
 #map { width:120%; overflow:hidden; margin:0 0 0 -40px; }
-#map iframe { margin-top:-50px }
+#map iframe { width:100%; height:100%; margin-top:-50px }
 
 
-
-.typekit-badge { display:none !important; }
 
 
 
@@ -79,7 +77,7 @@ select.k-select { width:18em; height:30px; }
 .k-button { font-size:10px; }
 optgroup { font-weight:700; }
 
-#picmenu { padding:6px 0 15px 0px; display:none; }
+#picmenu { padding:6px 0 15px 0px; }
 
 
 div.picrow { border: 0px solid #000; }
