@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://gridbyexample.com/examples/code/example1.html -->
+<html style="--lns-color-purple:hsla(230,84%,63%,1); --lns-color-salmon:hsla(359,98%,68%,1); --lns-color-green:hsla(149,78%,53%,1); --lns-color-blue:hsla(201,100%,55%,1); --lns-color-red:hsla(356,86%,55%,1); --lns-color-yellow:hsla(40,100%,66%,1); --lns-color-grey8:hsla(230,11%,19%,1); --lns-color-grey7:hsla(230,10%,30%,1); --lns-color-grey6:hsla(230,9%,45%,1); --lns-color-grey5:hsla(230,8%,60%,1); --lns-color-grey4:hsla(230,7%,75%,1); --lns-color-grey3:hsla(230,7%,84%,1); --lns-color-grey2:hsla(230,7%,92%,1); --lns-color-grey1:hsla(230,7%,97%,1); --lns-color-white:hsla(230,7%,100%,1); --lns-themeLight-color-body:hsla(230,11%,19%,1); --lns-themeLight-color-bodyDimmed:hsla(230,40%,19%,0.6); --lns-themeLight-color-background:hsla(230,7%,100%,1); --lns-themeLight-color-overlay:hsla(230,7%,100%,1); --lns-themeLight-color-primary:hsla(230,84%,63%,1); --lns-themeLight-color-focusRing:hsla(230,84%,63%,0.5); --lns-themeLight-color-border:hsla(230,9%,45%,0.2); --lns-themeLight-color-disabledContent:hsla(230,8%,60%,1); --lns-themeLight-color-disabledBackground:hsla(230,7%,92%,1); --lns-themeLight-color-backdrop:hsla(230,11%,19%,0.5); --lns-themeLight-color-formFieldBorder:hsla(230,7%,84%,1); --lns-themeLight-color-formFieldBackground:hsla(230,7%,100%,1); --lns-themeDark-color-body:hsla(230,7%,97%,1); --lns-themeDark-color-bodyDimmed:hsla(230,40%,97%,0.6); --lns-themeDark-color-background:hsla(230,11%,19%,1); --lns-themeDark-color-overlay:hsla(230,10%,30%,1); --lns-themeDark-color-primary:hsla(230,84%,63%,1); --lns-themeDark-color-focusRing:hsla(230,84%,63%,0.5); --lns-themeDark-color-border:hsla(230,7%,75%,0.2); --lns-themeDark-color-disabledContent:hsla(230,8%,60%,1); --lns-themeDark-color-disabledBackground:hsla(230,10%,30%,1); --lns-themeDark-color-backdrop:hsla(230,11%,19%,0.5); --lns-themeDark-color-formFieldBorder:hsla(230,9%,45%,1); --lns-themeDark-color-formFieldBackground:hsla(230,11%,19%,1); --lns-fontSize-small:12px; --lns-lineHeight-small:18px; --lns-fontSize-medium:14px; --lns-lineHeight-medium:22px; --lns-fontSize-large:18px; --lns-lineHeight-large:26px; --lns-fontSize-xlarge:22px; --lns-lineHeight-xlarge:32px; --lns-fontSize-xxlarge:32px; --lns-lineHeight-xxlarge:38px; --lns-fontWeight-normal:400; --lns-fontWeight-semiBold:600; --lns-radius-medium:4px; --lns-radius-large:8px; --lns-shadow-small:0 1px 4px hsla(0,0%,0%,0.15); --lns-shadow-medium:0 1px 4px hsla(0,0%,0%,0.1), 0 4px 16px hsla(0,0%,0%,0.07); --lns-shadow-large:0 1px 4px hsla(0,0%,0%,0.07), 0 6px 24px hsla(0,0%,0%,0.1);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Example 1</title>
+    
+    <style>
+	body {
+		margin: 40px;
+	}
+	.wrapper {
+		display: grid;
+    grid-gap: 10px;
+		grid-template-columns: 100px 100px 100px;
+		background-color: #fff;
+		color: #444;
+	}
+
+	.box {
+		background-color: #444;
+		color: #fff;
+		border-radius: 5px;
+		padding: 20px;
+		font-size: 150%;
+
+	}
+
+
+
+   </style>
+<style>
+    :root,
+    .theme-light {
+      --lns-color-body: var(--lns-themeLight-color-body);--lns-color-bodyDimmed: var(--lns-themeLight-color-bodyDimmed);--lns-color-background: var(--lns-themeLight-color-background);--lns-color-overlay: var(--lns-themeLight-color-overlay);--lns-color-primary: var(--lns-themeLight-color-primary);--lns-color-focusRing: var(--lns-themeLight-color-focusRing);--lns-color-border: var(--lns-themeLight-color-border);--lns-color-disabledContent: var(--lns-themeLight-color-disabledContent);--lns-color-disabledBackground: var(--lns-themeLight-color-disabledBackground);--lns-color-backdrop: var(--lns-themeLight-color-backdrop);--lns-color-formFieldBorder: var(--lns-themeLight-color-formFieldBorder);--lns-color-formFieldBackground: var(--lns-themeLight-color-formFieldBackground);;
+    }
+
+    .theme-dark {
+      --lns-color-body: var(--lns-themeDark-color-body);--lns-color-bodyDimmed: var(--lns-themeDark-color-bodyDimmed);--lns-color-background: var(--lns-themeDark-color-background);--lns-color-overlay: var(--lns-themeDark-color-overlay);--lns-color-primary: var(--lns-themeDark-color-primary);--lns-color-focusRing: var(--lns-themeDark-color-focusRing);--lns-color-border: var(--lns-themeDark-color-border);--lns-color-disabledContent: var(--lns-themeDark-color-disabledContent);--lns-color-disabledBackground: var(--lns-themeDark-color-disabledBackground);--lns-color-backdrop: var(--lns-themeDark-color-backdrop);--lns-color-formFieldBorder: var(--lns-themeDark-color-formFieldBorder);--lns-color-formFieldBackground: var(--lns-themeDark-color-formFieldBackground);;
+    }
+  </style><style data-styled="" data-styled-version="4.4.1"></style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style></head>
+
+ <body class="js-focus-visible">
+
+	 <div class="wrapper">
+		<div class="box a">A</div>
+		<div class="box b">B</div>
+		<div class="box c">C</div>
+		<div class="box d">D</div>
+		<div class="box e">E</div>
+		<div class="box f">F</div>
+	</div>
+
+
+<div id="viewPortSize" class="bottom_right" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px; display: none;">Inner: 1553 x 1066<br>Outer: 1919 x 1177</div></body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
