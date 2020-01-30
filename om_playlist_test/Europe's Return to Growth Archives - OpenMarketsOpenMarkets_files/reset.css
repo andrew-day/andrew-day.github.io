@@ -1,0 +1,193 @@
+/* Set up a blank canvas to work from. */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+}
+.ie6 audio, .ie6 canvas, .ie6 video, .ie7 audio, .ie7 canvas, .ie7 video {
+    display: inline;
+    zoom: 1;
+}
+[hidden] {
+    display: none;
+}
+html {
+    overflow-y: scroll;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    min-height: 100%;
+
+    background: #fff;
+
+    color: #000;
+}
+.ie6 body {
+    height: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+nav ol, nav ul {
+    list-style-image: none;
+}
+blockquote {
+    quotes: none;
+}
+blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td {
+    vertical-align: top;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+a:hover, a:active {
+    outline: none;
+}
+abbr[title], dfn[title] {
+    cursor: help;
+}
+dfn {
+    font-style: italic;
+}
+ins {
+    background-color: #ff9;
+
+    color: #000;
+    text-decoration: none;
+}
+mark {
+    background-color: #ff0;
+
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+pre, code, kbd, samp {
+    font-family: monospace, serif;
+}
+.ie6 pre, .ie6 code, .ie6 kbd, .ie6 samp {
+    font-family: "Courier New", monospace;
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+small {
+    font-size: 85%;
+}
+sub, sup {
+    position: relative;
+
+    font-size: 75%;
+    line-height: 0;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+img {
+    border: none;
+
+    vertical-align: middle;
+
+    -ms-interpolation-mode: bicubic;
+}
+label, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+.ie6 legend, .ie7 legend {
+    margin-left: -7px;
+}
+button, input, select {
+    margin: 0;
+
+    font-family: sans-serif;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.ie6 button, .ie6 input, .ie6 select, .ie7 button, .ie7 input, .ie7 select {
+    vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+}
+.ie6 button, .ie6 input, .ie7 button, .ie7 input {
+    overflow: visible;
+}
+.ie6 table button, .ie6 table input, .ie7 table button, .ie7 table input {
+    overflow: auto;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    padding: 0;
+
+    border: none;
+}
+textarea {
+    margin: 0;
+    overflow: auto;
+    resize: vertical;
+
+    font-family: sans-serif;
+    font-size: 100%;
+    vertical-align: top;
+}
+/* Normalize input@placeholder colors. Change as needed.
+ * (Yes, they need to be separately listed.)
+ */
+input::-webkit-input-placeholder {
+    color: #767676;
+}
+input::-moz-placeholder {
+    color: #767676;
+}
+input::placeholder {
+    color: #767676;
+}
+/* For browsers that don't support @placeholder (see also ../js/utils.js):
+ */
+input.placeholder-visible {
+    color: #767676;
+}

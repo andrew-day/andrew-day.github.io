@@ -1,0 +1,1 @@
+jQuery(function(n){n('#s,[name="s"]').suggest(wpss_options.ajaxurl,{onSelect:function(){var o=n(this).parents("form");n.post(wpss_options.url,{action:"wpss-post-url",_wpnonce:wpss_options.nonce,title:n(".ac_over").text()},function(n){n?window.location=n:o.submit()}).fail(function(){o.submit()})}})});

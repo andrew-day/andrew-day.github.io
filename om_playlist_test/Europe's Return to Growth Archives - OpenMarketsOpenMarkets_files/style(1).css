@@ -1,0 +1,20 @@
+
+#pbd-alp-load-posts a:link, #pbd-alp-load-posts a:visited {
+	color: #FFF;
+	font-size:14px;
+}
+
+#pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active {
+	color: #FFF;
+}
+
+#pbd-alp-load-posts {
+/*margin-left:-8px;*/
+}
+
+div.main div.more {
+	height: 40px;
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+}
